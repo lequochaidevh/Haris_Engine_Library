@@ -1,0 +1,9 @@
+# Google App Engine generated folder
+appengine-generated/
+build/
+Reference/Source/
+*.ignore
+*_ignore
+*.notrack
+imgui.ini
+*.mp4
