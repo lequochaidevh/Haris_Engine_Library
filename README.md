@@ -15,19 +15,21 @@ graph TD
         C[Event/Task Engine<br> Thread Pool / Callback Subriber]
         GPU_App[Vision / AI Core<br>Parallel Compute]
     end
+
+    Wrapper_note[System Abstraction Layer / Wrappers / Libs]
+    style Wrapper_note fill:none,stroke:none,font-weight:none,color:#000000
     
     subgraph Wrapper [" "]
         SAL_Core[Your Framework<br> GLFW / glm / imgui / ...]
         SAL_GPU[Unified Memory & GPU Stream Manager]
-        Wrapper_note[System Abstraction Layer / Wrappers / Libs]
+        Wrapper_note
     end
 
-    style Wrapper_note fill:none,stroke:none,font-weight:none
-    
     subgraph Hardware [Linux Kernel & Hardware Primitives]
         D[Kernel Drivers / VFS]
         E[GPU / NPU Accelerator<br> Vulkan / OpenCL / ... ]
     end
+
 
     A <--> SAL_Core
     B --> SAL_Core
